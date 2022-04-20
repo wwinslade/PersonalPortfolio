@@ -1,5 +1,6 @@
-0.001   /Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.001
-0.002   /Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.002
-0.003   /Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.003
-0.004   /Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.004
-0.005   /Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.005
+0.001,/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.001
+0.002,/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.002
+0.003,/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.003
+0.004,/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.004
+0.005,/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.005
+0.006,/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.006

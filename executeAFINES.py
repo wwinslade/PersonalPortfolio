@@ -6,22 +6,37 @@
 #
 
 import csv
+import os
 import subprocess as sp
+import time
 
-# Use if you want to supress stdout from AFINES executable:
-#FNULL = open(os.devnull, 'w')
+# Clean Terminal
+sp.call('clear')
 
-inFile = open('vars_in.txt', 'r', newline='')
-dataIn = csv.reader(inFile, delimiter='\t')
-for lines in dataIn:
-    print(lines)
+# Use in sp.call(afines....) if you want to supress stdout from AFINES executable:
+FNULL = open(os.devnull, 'w')
 
-inFile.close()
-# argsIn =
-# dirIn =
 
-# for lines in inFile
+inFile = open('vars_in.txt', 'r', newline= '')
+inData=[x.strip().split(',') for x in inFile]
+#print(inData[0][0])
+#print(range(len(inData)))
 
-# afines = '/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/bin/AFINES -polymer_bending_modulus ' + argsIn +' -dir ' +dirIn
+for i in range(len(inData)):
+    modulusIn = inData[i][0]
+    dirIn = inData[i][1]
+    print("\nStarting new sim with modulus {} and output directory {}".format(modulusIn, dirIn))
 
-# sp.call(afines, stdout=FNULL, stderr=FNULL, shell=False)
+    # Note: if you want to change a different variable, you'll need to change the following string accordingly:
+    afines = '/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/bin/AFINES --c /Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/in/casesForApril7/april_7_in_2.cfg --polymer_bending_modulus ' + modulusIn +' --dir ' +dirIn
+    # print("DEBUG: Command determined: {}".format(afines))
+
+    # Calls executable with specified inputs from array
+    sp.call(afines, stdout=FNULL, stderr=FNULL, shell=True)
+   
+    # Waits for AFINES sim to finish execution to prevent computer overload
+    time.sleep(20)
+    
+    print("\nCompleted Simulation {} of {}".format((i+1), len(inData)))
+
+print('\n >> Program completed, see user-defined output directories for sim data\n')
