@@ -1,4 +1,4 @@
-# PersonalScripts
+# PersonalPortfolio
 
 Hello There! If you're name isn't William Winslade, I'm honestly suprised that you've found your way here!
 
