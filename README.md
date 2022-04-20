@@ -6,7 +6,7 @@ I hope you're doing well whomever you are; This readme file will serve as a brie
 
 # Projects:
 - executeAFINES.py
-     As part of working with Dr. Abel in UTK's CBE department for undergraduate research, I was tasked with running computer simulations of actin filament networks for purposes of analyzing the forces between the actin polymers as a result of several conditions. In order to effectively execute these simulations, I wrote this python script to take a range of variable values that I pre-determined, and run the AFINES simualtion executable with these values accordingly.
+   - As part of working with Dr. Abel in UTK's CBE department for undergraduate research, I was tasked with running computer simulations of actin filament networks for purposes of analyzing the forces between the actin polymers as a result of several conditions. In order to effectively execute these simulations, I wrote this python script to take a range of variable values that I pre-determined, and run the AFINES simualtion executable with these values accordingly.
 
 # Concepts used:
 - Basic syntax and flow control
