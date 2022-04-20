@@ -26,7 +26,7 @@ for i = 1:nTerms
 
 end
 
-writecell(fileMatrix,'build_vars_in.txt','Delimiter',',')
+writecell(fileMatrix,'build_vars_in.txt','Delimiter',',');
 type 'build_vars_in.txt'
 
 

@@ -12,6 +12,7 @@
 
 import csv
 import os
+import shutil
 import subprocess as sp
 import time
 
@@ -24,16 +25,26 @@ FNULL = open(os.devnull, 'w')
 
 inFile = open('build_vars_in.txt', 'r', newline= '')
 inData=[x.strip().split(',') for x in inFile]
-#print(inData[0][0])
+#print(inData[0][1])
 #print(range(len(inData)))
 
+
+# Creates needed directories if they don't already exist
+for j in range(len(inData)):
+    if os.path.exists('/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/{}'.format(inData[j][0])):
+        shutil.rmtree('/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/{}'.format(inData[j][0]))
+    os.mkdir('/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/{}'.format(inData[j][0]))
+    
+    #print('DEGUG: Dir Imported: '+ (str(inData[j][1])))
+
+# Executes simulations
 for i in range(len(inData)):
     modulusIn = inData[i][0]
     dirIn = inData[i][1]
     print("\nStarting new sim with modulus {} and output directory ...{}".format(modulusIn, dirIn[-40:]))
 
     # Note: if you want to change a different variable, you'll need to change the following string accordingly:
-    afines = '/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/bin/AFINES --c /Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/in/casesForApril7/april_7_in_2.cfg --polymer_bending_modulus ' + modulusIn +' --dir ' +dirIn
+    afines = '/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/bin/AFINES --c /Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/in/casesForApril7/april_7_in_2.cfg --polymer_bending_modulus 1 --link_length ' + modulusIn +' --dir ' + dirIn
     # print("DEBUG: Command determined: {}".format(afines))
 
     # Calls executable with specified inputs from array

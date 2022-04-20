@@ -1,0 +1,5 @@
+0,/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0
+0.25,/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.25
+0.5,/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.5
+0.75,/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/0.75
+1,/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/1
