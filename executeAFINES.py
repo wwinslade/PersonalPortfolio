@@ -3,6 +3,11 @@
 # 20 April 2022
 #
 # PURPOSE: Run a simulation executable with arguments to test a range of values for a variable of choice
+# 
+# USAGE: Currently, this program is only written to change two variables when calling the simulation executable
+#        If you are wanting to change more than two variables at once, the script will have to be adjusted accordingly
+#        Currently, the 'vars_in.txt' file is used for inputting your variable settings. It is a comma delimited structure with
+#        file in the format: variable1_input, variable2_input
 #
 
 import csv
