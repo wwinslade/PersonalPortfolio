@@ -2,7 +2,7 @@
 
 Hello There! If you're name isn't William Winslade, I'm honestly suprised that you've found your way here!
 
-I hope you're doing well whomever you are; This readme file will serve as a brief summary of projects and concepts that I've built and used in this repository for my own personal coding edification
+I hope you're doing well whomever you are; This readme file will serve as a brief summary of projects and concepts that I've built and used in this repository for my own personal coding edification.
 
 # Projects:
 - executeAFINES.py
