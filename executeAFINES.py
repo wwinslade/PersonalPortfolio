@@ -22,7 +22,7 @@ sp.call('clear')
 FNULL = open(os.devnull, 'w')
 
 
-inFile = open('vars_in.txt', 'r', newline= '')
+inFile = open('build_vars_in.txt', 'r', newline= '')
 inData=[x.strip().split(',') for x in inFile]
 #print(inData[0][0])
 #print(range(len(inData)))
@@ -30,7 +30,7 @@ inData=[x.strip().split(',') for x in inFile]
 for i in range(len(inData)):
     modulusIn = inData[i][0]
     dirIn = inData[i][1]
-    print("\nStarting new sim with modulus {} and output directory {}".format(modulusIn, dirIn))
+    print("\nStarting new sim with modulus {} and output directory ...{}".format(modulusIn, dirIn[-40:]))
 
     # Note: if you want to change a different variable, you'll need to change the following string accordingly:
     afines = '/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/bin/AFINES --c /Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/in/casesForApril7/april_7_in_2.cfg --polymer_bending_modulus ' + modulusIn +' --dir ' +dirIn
