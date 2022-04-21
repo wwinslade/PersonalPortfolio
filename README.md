@@ -14,4 +14,6 @@ I hope you're doing well whomever you are; This readme file will serve as a brie
 - Calling other executables from a python script
 - User interface/feedback
 
-
+# Laungages Used
+- Python
+- MATLAB
