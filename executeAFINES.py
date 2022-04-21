@@ -31,9 +31,9 @@ inData=[x.strip().split(',') for x in inFile]
 
 # Creates needed directories if they don't already exist
 for j in range(len(inData)):
-    if os.path.exists('/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/{}'.format(inData[j][0])):
-        shutil.rmtree('/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/{}'.format(inData[j][0]))
-    os.mkdir('/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21/{}'.format(inData[j][0]))
+    if os.path.exists('/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21_2/{}'.format(inData[j][0])):
+        shutil.rmtree('/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21_2/{}'.format(inData[j][0]))
+    os.mkdir('/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/out/apr21_2/{}'.format(inData[j][0]))
     
     #print('DEGUG: Dir Imported: '+ (str(inData[j][1])))
 
@@ -41,7 +41,7 @@ for j in range(len(inData)):
 for i in range(len(inData)):
     modulusIn = inData[i][0]
     dirIn = inData[i][1]
-    print("\nStarting new sim with modulus {} and output directory ...{}".format(modulusIn, dirIn[-40:]))
+    print("\nStarting new sim with link stiffness {} and output directory ...{}".format(modulusIn, dirIn[-40:]))
 
     # Note: if you want to change a different variable, you'll need to change the following string accordingly:
     afines = '/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/bin/AFINES --c /Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/in/casesForApril7/april_7_in_2.cfg --polymer_bending_modulus 1 --p_motor_stiffness ' + modulusIn +' --dir ' + dirIn
