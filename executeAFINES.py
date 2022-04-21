@@ -44,15 +44,13 @@ for i in range(len(inData)):
     print("\nStarting new sim with modulus {} and output directory ...{}".format(modulusIn, dirIn[-40:]))
 
     # Note: if you want to change a different variable, you'll need to change the following string accordingly:
-    afines = '/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/bin/AFINES --c /Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/in/casesForApril7/april_7_in_2.cfg --polymer_bending_modulus 1 --link_length ' + modulusIn +' --dir ' + dirIn
+    afines = '/Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/bin/AFINES --c /Users/williamwinslade/Documents/Xcode/researchMaster/AFINES/in/casesForApril7/april_7_in_2.cfg --polymer_bending_modulus 1 --p_motor_stiffness ' + modulusIn +' --dir ' + dirIn
     # print("DEBUG: Command determined: {}".format(afines))
 
     # Calls executable with specified inputs from array
-    sp.call(afines, stdout=FNULL, stderr=FNULL, shell=True)
-   
-    # Waits for AFINES sim to finish execution to prevent computer overload
-    time.sleep(20)
-    
+    sp.call(afines, shell=True, stdout=FNULL, stderr=FNULL)
+    time.sleep(2.5)
+
     print("\nCompleted Simulation {} of {}".format((i+1), len(inData)))
 
 print('\n >> Program completed, see user-defined output directories for sim data\n')
