@@ -14,7 +14,6 @@ import csv
 import os
 import shutil
 import subprocess as sp
-import time
 
 # Clean Terminal
 sp.call('clear')
