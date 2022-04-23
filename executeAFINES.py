@@ -14,6 +14,12 @@ import csv
 import os
 import shutil
 import subprocess as sp
+import sys
+
+userInput = input("Proceed with AFINES execution?\n(y/n) >> ")
+if userInput == 'n':
+    sys.exit('ERROR: User Aborted Execution')
+
 
 # Clean Terminal
 sp.call('clear')
