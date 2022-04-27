@@ -1,4 +1,3 @@
-#
 # Created by: William Winslade
 # 20 April 2022
 #
@@ -16,8 +15,9 @@ import shutil
 import subprocess as sp
 import sys
 
+# Prevent erroneus execution of this script and potential for overwriting needed data files
 userInput = input("Proceed with AFINES execution?\n(y/n) >> ")
-if userInput == 'n':
+if userInput != 'y':
     sys.exit('ERROR: User Aborted Execution')
 
 
@@ -28,7 +28,7 @@ sp.call('clear')
 FNULL = open(os.devnull, 'w')
 
 
-inFile = open('build_vars_in.txt', 'r', newline= '')
+inFile = open('/Users/williamwinslade/Documents/GitHub/PersonalScripts/build_vars_in.txt', 'r', newline= '')
 inData=[x.strip().split(',') for x in inFile]
 #print(inData[0][1])
 #print(range(len(inData)))
@@ -54,7 +54,6 @@ for i in range(len(inData)):
 
     # Calls executable with specified inputs from array
     sp.call(afines, shell=True, stdout=FNULL, stderr=FNULL)
-    time.sleep(2.5)
 
     print("\nCompleted Simulation {} of {}".format((i+1), len(inData)))
 
